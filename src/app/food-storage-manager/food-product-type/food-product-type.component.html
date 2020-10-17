@@ -1,0 +1,19 @@
+<div>
+  <mat-card class="product-type-card">
+    <mat-card-header class="product-type-header">
+      <p>Food Product Types</p>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-selection-list #products [multiple]="false">
+        <mat-list-option *ngFor="let productType of productTypes" [value]="productType">
+          {{ productType }}
+        </mat-list-option>
+      </mat-selection-list>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button (click)="addProductType()">Add</button>
+      <button mat-raised-button (click)="deleteProductType(products.selectedOptions.selected[0]?.value)">Delete</button>
+      <button mat-raised-button (click)="cancel()">Cancel</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
