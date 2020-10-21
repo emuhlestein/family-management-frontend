@@ -1,0 +1,17 @@
+<div class="container">
+  <form class="product-type-container" (ngSubmit)="onAddProductType(frm)"
+    #frm="ngForm">
+    <h2 class=" text-center">Add Product Type</h2>
+    <fieldset class="form-group mt-3">
+      <label for="name" class="sr-only">Name</label>
+      <input type="text" ngModel name="name" class="form-control"
+        placeholder="Name" required autofocus="">
+    </fieldset>
+    <fieldset class="form-group mt-3">
+      <label for="description" class="sr-only">Name</label>
+      <input type="text" ngModel name="description" class="form-control"
+        placeholder="Description" required>
+    </fieldset>
+    <button class="btn btn-success btn-block">Create</button>
+  </form>
+</div>

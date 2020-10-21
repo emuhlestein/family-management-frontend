@@ -8,6 +8,7 @@ import { FoodStorageComponent } from './food-storage/food-storage.component';
 import { FoodStorageManagerComponent } from './food-storage-manager.component';
 import { ProductTypeComponent } from './product-type/product-type.component';
 import { RouterModule } from '@angular/router';
+import { ProductTypeAddComponent } from './product-type-add/product-type-add.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { RouterModule } from '@angular/router';
     FoodProductDialogComponent,
     FoodStorageComponent,
     FoodStorageManagerComponent,
-    ProductTypeComponent
+    ProductTypeComponent,
+    ProductTypeAddComponent
   ],
   imports: [
     CommonModule,
@@ -28,6 +30,10 @@ import { RouterModule } from '@angular/router';
       {
         path: 'types',
         component: ProductTypeComponent
+      },
+      {
+        path: 'add',
+        component: ProductTypeAddComponent
       }
     ])
   ],

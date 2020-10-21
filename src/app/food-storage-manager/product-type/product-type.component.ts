@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProductTypeService } from '../product-type.service';
 import { ProductType } from './product-type';
 
@@ -11,7 +12,7 @@ export class ProductTypeComponent implements OnInit {
 
   productTypes = new Array(new ProductType(1, "Pepper", "test"), new ProductType(2, "Salt", "test"), new ProductType(3, "Paprika", "test"));
 
-  constructor(private service: ProductTypeService) { }
+  constructor(private service: ProductTypeService, private router: Router) { }
 
   ngOnInit(): void {
     this.service.productTypes$.subscribe(data => {
@@ -27,7 +28,7 @@ export class ProductTypeComponent implements OnInit {
   }
 
   onAddProductType() {
-
+    this.router.navigate(['/foodstorage/add']);
   }
 
   addProductType() {
