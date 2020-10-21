@@ -6,7 +6,7 @@ import { FoodProductComponent } from './food-product/food-product.component';
 import { FoodProductDialogComponent } from './food-product-dialog/food-product-dialog.component';
 import { FoodStorageComponent } from './food-storage/food-storage.component';
 import { FoodStorageManagerComponent } from './food-storage-manager.component';
-import { FoodProductTypeComponent } from './food-product-type/food-product-type.component';
+import { ProductTypeComponent } from './product-type/product-type.component';
 import { MaterialModule } from '../material.module';
 import { RouterModule } from '@angular/router';
 
@@ -16,7 +16,7 @@ import { RouterModule } from '@angular/router';
     FoodProductDialogComponent,
     FoodStorageComponent,
     FoodStorageManagerComponent,
-    FoodProductTypeComponent
+    ProductTypeComponent
   ],
   imports: [
     CommonModule,
@@ -29,7 +29,7 @@ import { RouterModule } from '@angular/router';
       },
       {
         path: 'types',
-        component: FoodProductTypeComponent
+        component: ProductTypeComponent
       }
     ])
   ],

@@ -1,0 +1,31 @@
+<div class="container">
+  <h2 class="text-center">Product Types</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>
+          Product Type
+        </th>
+        <th>
+          Description
+        </th>
+        <th>
+          Action
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let productType of productTypes">
+        <td>{{productType.name}}</td>
+        <td>{{productType.description}}</td>
+        <td>
+          <form id="delete-product-type" action="/producttype" method="post">
+            <input type="hidden" name="id" value="${producttype.id}">
+            <button type="submit" class="btn btn-danger"
+              (click)="confirmDelete()">Delete</button>
+          </form>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
