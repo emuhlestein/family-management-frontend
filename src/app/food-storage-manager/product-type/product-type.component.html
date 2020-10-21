@@ -19,11 +19,8 @@
         <td>{{productType.name}}</td>
         <td>{{productType.description}}</td>
         <td>
-          <form id="delete-product-type" action="/producttype" method="post">
-            <input type="hidden" name="id" value="${producttype.id}">
-            <button type="submit" class="btn btn-danger"
-              (click)="confirmDelete()">Delete</button>
-          </form>
+          <button class="btn btn-danger"
+            (click)="onDeleteProductType(productType.id)">Delete</button>
         </td>
       </tr>
     </tbody>

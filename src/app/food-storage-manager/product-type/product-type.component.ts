@@ -26,11 +26,23 @@ export class ProductTypeComponent implements OnInit {
     this.service.getFoodProductTypes();
   }
 
+  onAddProductType() {
+
+  }
+
   addProductType() {
     const newItem = new ProductType(4, "New Item", "");
     const foundItem = this.productTypes.find(item => item.name === newItem.name)
     if (!foundItem) {
       this.productTypes.push(newItem);
+    }
+  }
+
+  onDeleteProductType(id: number) {
+    if (this.confirmDelete()) {
+      alert('This item will be deleted: ' + id);
+    } else {
+      alert('THis item will not be deleted: ' + id);
     }
   }
 

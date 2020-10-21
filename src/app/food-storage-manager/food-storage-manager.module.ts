@@ -7,7 +7,6 @@ import { FoodProductDialogComponent } from './food-product-dialog/food-product-d
 import { FoodStorageComponent } from './food-storage/food-storage.component';
 import { FoodStorageManagerComponent } from './food-storage-manager.component';
 import { ProductTypeComponent } from './product-type/product-type.component';
-import { MaterialModule } from '../material.module';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -21,7 +20,6 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     FormsModule,
-    MaterialModule,
     RouterModule.forChild([
       {
         path: '',

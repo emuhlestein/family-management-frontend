@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
 import { FoodProductDialogComponent } from '../food-product-dialog/food-product-dialog.component';
 
 @Component({
@@ -9,7 +8,7 @@ import { FoodProductDialogComponent } from '../food-product-dialog/food-product-
 })
 export class FoodProductComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
