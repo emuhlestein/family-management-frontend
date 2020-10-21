@@ -14,7 +14,7 @@ export class ProductTypeService {
   constructor(private http: HttpClient) { }
 
   getFoodProductTypes() {
-    const url = "http://localhost:8080/foodproducttype";
+    const url = "http://localhost:9001/producttype";
     const data$ = this.http.get<ProductType[]>(url);
     data$.subscribe(data => {
       console.log(data);

@@ -14,16 +14,16 @@ export class ProductTypeComponent implements OnInit {
   constructor(private service: ProductTypeService) { }
 
   ngOnInit(): void {
-    // this.service.foodProductTypes$.subscribe(data => {
-    //   this.productTypes = [];
-    //   if (data) {
-    //     data.forEach(item => {
-    //       this.productTypes.push(item.name);
-    //     })
-    //   }
-    // })
+    this.service.productTypes$.subscribe(data => {
+      this.productTypes = [];
+      if (data) {
+        data.forEach(item => {
+          this.productTypes.push(item);
+        })
+      }
+    })
 
-    // this.service.getFoodProductTypes();
+    this.service.getFoodProductTypes();
   }
 
   addProductType() {
