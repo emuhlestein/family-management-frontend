@@ -24,7 +24,7 @@ export class ProductTypeComponent implements OnInit {
       }
     })
 
-    this.service.getFoodProductTypes();
+    this.service.getProductTypes();
   }
 
   onAddProductType() {
@@ -43,7 +43,7 @@ export class ProductTypeComponent implements OnInit {
     if (this.confirmDelete()) {
       alert('This item will be deleted: ' + id);
     } else {
-      alert('THis item will not be deleted: ' + id);
+      alert('This item will not be deleted: ' + id);
     }
   }
 
