@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ContainerType } from './container-type';
+import { ContainerType } from '../container-type';
 
 @Component({
   selector: 'app-container-type-list',

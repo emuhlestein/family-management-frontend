@@ -13,6 +13,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
         path: 'producttype',
         loadChildren: () => import('./product-type/product-type.module').then(m => m.ProductTypeModule)
       },
+      {
+        path: 'containertype',
+        loadChildren: () => import('./container-type/container-type.module').then(m => m.ContainerTypeModule)
+      },
       { path: '', redirectTo: 'foodstorage', pathMatch: 'full' },
       { path: '**', component: PageNotFoundComponent }
     ])

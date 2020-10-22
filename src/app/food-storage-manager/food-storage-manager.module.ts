@@ -7,17 +7,13 @@ import { FoodProductDialogComponent } from './food-product-dialog/food-product-d
 import { FoodStorageComponent } from './food-storage/food-storage.component';
 import { FoodStorageManagerComponent } from './food-storage-manager.component';
 import { RouterModule } from '@angular/router';
-import { ContainerTypeListComponent } from './container-type-list/container-type-list.component';
-import { ContainerTypeAddComponent } from './container-type-add/container-type-add.component';
 
 @NgModule({
   declarations: [
     FoodProductComponent,
     FoodProductDialogComponent,
     FoodStorageComponent,
-    FoodStorageManagerComponent,
-    ContainerTypeListComponent,
-    ContainerTypeAddComponent
+    FoodStorageManagerComponent
   ],
   imports: [
 
@@ -27,14 +23,6 @@ import { ContainerTypeAddComponent } from './container-type-add/container-type-a
       {
         path: '',
         component: FoodStorageComponent
-      },
-      {
-        path: 'containertypes',
-        component: ContainerTypeListComponent
-      },
-      {
-        path: 'addcontainertypes',
-        component: ContainerTypeAddComponent
       }
     ])
   ],
