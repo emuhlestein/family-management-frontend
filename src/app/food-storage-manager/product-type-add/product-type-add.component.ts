@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgForm, NgModel } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -10,7 +10,7 @@ import { ProductType } from '../product-type/product-type';
   templateUrl: './product-type-add.component.html',
   styleUrls: ['./product-type-add.component.scss']
 })
-export class ProductTypeAddComponent implements OnInit {
+export class ProductTypeAddComponent implements OnInit, OnDestroy {
 
   private subscription: Subscription;
 
@@ -20,10 +20,15 @@ export class ProductTypeAddComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  ngOnDestroy(): void {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
+  }
+
+
   onAddProductType(form: NgForm) {
-    console.log("Form: ", form.value['name']);
-    console.log("Form: ", form.value['description']);
-    this.subscription = this.service.addProductType(new ProductType(0, form.value['name'], form.value['description'])).subscribe({
+    this.subscription = this.service.addProductType(new ProductType(0, form.value.name, form.value.description)).subscribe({
       next: data => {
         this.service.getProductTypes();
         this.router.navigate(['/foodstorage/types']);
@@ -32,14 +37,6 @@ export class ProductTypeAddComponent implements OnInit {
 
       }
     });
-  }
-
-  onClick(model: NgModel) {
-    console.log("Model: model: ", model);
-    console.log("Model: value: ", model.value);
-    console.log("Model: Name: ", model.name);
-    console.log("Model: touched: ", model.touched);
-    console.log("Model: dirty: ", model.dirty);
   }
 
 }
