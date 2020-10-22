@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-container-type-add',
@@ -8,13 +9,13 @@ import { NgForm } from '@angular/forms';
 })
 export class ContainerTypeAddComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
 
   onAddContainerType(form: NgForm) {
-
+    this.router.navigate(['/foodstorage/add']);
   }
 
 }

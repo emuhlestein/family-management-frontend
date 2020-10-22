@@ -9,6 +9,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
         path: 'foodstorage',
         loadChildren: () => import('./food-storage-manager/food-storage-manager.module').then(m => m.FoodStorageModule)
       },
+      {
+        path: 'producttype',
+        loadChildren: () => import('./product-type/product-type.module').then(m => m.ProductTypeModule)
+      },
       { path: '', redirectTo: 'foodstorage', pathMatch: 'full' },
       { path: '**', component: PageNotFoundComponent }
     ])

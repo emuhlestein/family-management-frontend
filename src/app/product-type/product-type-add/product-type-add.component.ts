@@ -3,7 +3,7 @@ import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { ProductTypeService } from '../product-type.service';
-import { ProductType } from '../product-type-list/product-type';
+import { ProductType } from '../product-type';
 
 @Component({
   selector: 'app-product-type-add',
