@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductTypeService } from '../product-type.service';
-import { ProductType } from './product-type';
+import { ProductType } from './product-type-list';
 
 @Component({
   selector: 'app-product-type',
-  templateUrl: './product-type.component.html',
-  styleUrls: ['./product-type.component.scss']
+  templateUrl: './product-type-list.component.html',
+  styleUrls: ['./product-type-list.component.scss']
 })
-export class ProductTypeComponent implements OnInit {
+export class ProductTypeListComponent implements OnInit {
 
   productTypes = new Array(new ProductType(1, "Pepper", "test"), new ProductType(2, "Salt", "test"), new ProductType(3, "Paprika", "test"));
 

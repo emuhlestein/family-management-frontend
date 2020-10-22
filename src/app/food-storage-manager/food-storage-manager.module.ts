@@ -6,7 +6,7 @@ import { FoodProductComponent } from './food-product/food-product.component';
 import { FoodProductDialogComponent } from './food-product-dialog/food-product-dialog.component';
 import { FoodStorageComponent } from './food-storage/food-storage.component';
 import { FoodStorageManagerComponent } from './food-storage-manager.component';
-import { ProductTypeComponent } from './product-type/product-type.component';
+import { ProductTypeListComponent } from './product-type-list/product-type-list.component';
 import { RouterModule } from '@angular/router';
 import { ProductTypeAddComponent } from './product-type-add/product-type-add.component';
 import { ProductTypeDirective } from './product-type-add/product-type.directive';
@@ -17,7 +17,7 @@ import { ProductTypeDirective } from './product-type-add/product-type.directive'
     FoodProductDialogComponent,
     FoodStorageComponent,
     FoodStorageManagerComponent,
-    ProductTypeComponent,
+    ProductTypeListComponent,
     ProductTypeAddComponent,
     ProductTypeDirective
   ],
@@ -31,7 +31,7 @@ import { ProductTypeDirective } from './product-type-add/product-type.directive'
       },
       {
         path: 'types',
-        component: ProductTypeComponent
+        component: ProductTypeListComponent
       },
       {
         path: 'add',
