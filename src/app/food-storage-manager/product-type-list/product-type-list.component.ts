@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ProductTypeService } from '../product-type.service';
-import { ProductType } from './product-type-list';
+import { ProductType } from './product-type';
 
 @Component({
   selector: 'app-product-type',

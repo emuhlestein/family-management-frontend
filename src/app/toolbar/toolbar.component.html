@@ -6,11 +6,12 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarMenu">
     <ul class="navbar-nav mr-auto" id="NavBar">
-      <li class="nav-item nav-link"><a [routerLink]="['/foodstorage/types']"
+      <li class="nav-item nav-link"><a
+          [routerLink]="['/foodstorage/producttypes']"
           routerLinkActive="active">Product
           Types</a></li>
-      <li class="btn"><a routerLink="/second-component"
-          routerLinkActive="active">Second Component</a></li>
+      <li class="btn"><a [routerLink]="['/foodstorage/containertypes']"
+          routerLinkActive="active">Container Types</a></li>
       <li class="btn"><a routerLink="/third-component"
           routerLinkActive="active">Third Component</a></li>
     </ul>

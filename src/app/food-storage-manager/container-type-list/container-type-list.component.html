@@ -1,0 +1,31 @@
+<div class="container base-container">
+  <h2 class="text-center">Container Types</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>
+          Container Type
+        </th>
+        <th>
+          Description
+        </th>
+        <th>
+          Action
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let containerType of containerTypes">
+        <td>{{containerType.name}}</td>
+        <td>{{containerType.description}}</td>
+        <td>
+          <button class="btn btn-danger"
+            (click)="onDeleteContainerType(containerType.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="btn btn-success btn-block submit-button"
+    (click)="onAddContainerType()">Create
+    New Container Type</button>
+</div>

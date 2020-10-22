@@ -10,6 +10,8 @@ import { ProductTypeListComponent } from './product-type-list/product-type-list.
 import { RouterModule } from '@angular/router';
 import { ProductTypeAddComponent } from './product-type-add/product-type-add.component';
 import { ProductTypeDirective } from './product-type-add/product-type.directive';
+import { ContainerTypeListComponent } from './container-type-list/container-type-list.component';
+import { ContainerTypeAddComponent } from './container-type-add/container-type-add.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { ProductTypeDirective } from './product-type-add/product-type.directive'
     FoodStorageManagerComponent,
     ProductTypeListComponent,
     ProductTypeAddComponent,
-    ProductTypeDirective
+    ProductTypeDirective,
+    ContainerTypeListComponent,
+    ContainerTypeAddComponent
   ],
   imports: [
     CommonModule,
@@ -30,12 +34,20 @@ import { ProductTypeDirective } from './product-type-add/product-type.directive'
         component: FoodStorageComponent
       },
       {
-        path: 'types',
+        path: 'producttypes',
         component: ProductTypeListComponent
       },
       {
-        path: 'add',
+        path: 'addproducttypes',
         component: ProductTypeAddComponent
+      },
+      {
+        path: 'containertypes',
+        component: ContainerTypeListComponent
+      },
+      {
+        path: 'addcontainertypes',
+        component: ContainerTypeAddComponent
       }
     ])
   ],
