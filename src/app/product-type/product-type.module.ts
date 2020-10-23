@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ProductTypeListComponent } from './product-type-list/product-type-list.component';
 import { ProductTypeAddComponent } from './product-type-add/product-type-add.component';
+import { ProductTypeDirective } from './product-type-add/product-type.directive';
 
 @NgModule({
   declarations: [
     ProductTypeListComponent,
-    ProductTypeAddComponent
+    ProductTypeAddComponent,
+    ProductTypeDirective
   ],
   imports: [
     CommonModule,

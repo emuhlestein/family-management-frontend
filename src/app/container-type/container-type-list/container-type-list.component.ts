@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 import { ContainerType } from '../container-type';
 
 @Component({
@@ -8,13 +9,13 @@ import { ContainerType } from '../container-type';
 })
 export class ContainerTypeListComponent implements OnInit {
   containerTypes: ContainerType[] = [];
-  constructor() { }
+  constructor(private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
   }
 
   onAddContainerType() {
-
+    this.router.navigate(['new'], { relativeTo: this.route });
   }
 
   onDeleteContainerType() {

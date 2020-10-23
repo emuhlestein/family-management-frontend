@@ -16,10 +16,11 @@
     <div class="form-group mt-3">
       <label for="description" class="sr-only">Name</label>
       <input type="text" ngModel name="description" class="form-control"
-        [class.is-invalid]="nameNgModel.errors?.fieldIsInvalid && (nameNgModel.touched || nameNgModel.dirty)"
+        appProductTypeValidate
+        [class.is-invalid]="descNgModel.errors?.fieldIsInvalid && (descNgModel.touched || descNgModel.dirty)"
         #descNgModel="ngModel" placeholder="Description" required>
       <span class="invalid-feedback"
-        *ngIf="(nameNgModel.touched || nameNgModel.dirty) && nameNgModel.errors?.fieldIsInvalid">
+        *ngIf="(descNgModel.touched || descNgModel.dirty) && descNgModel.errors?.fieldIsInvalid">
         Description cannot be empty
       </span>
     </div>
