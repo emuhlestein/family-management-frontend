@@ -12,6 +12,8 @@ import { ProductType } from '../product-type';
 })
 export class ProductTypeAddComponent implements OnInit, OnDestroy {
 
+  showAlert = false;
+  message = '';
   private subscription: Subscription;
 
   constructor(private service: ProductTypeService, private router: Router, private route: ActivatedRoute) {
@@ -30,14 +32,17 @@ export class ProductTypeAddComponent implements OnInit, OnDestroy {
     this.subscription = this.service.addProductType(new ProductType(0, form.value.name, form.value.description)).subscribe({
       next: data => {
         this.service.getProductTypes();
-        console.log('Route: ', this.route);
-        console.log('Router: ', this.router);
-
         this.router.navigate(['/producttype']);
       },
       error: error => {
-
+        console.error('Add product type error: ', error.error.message);
+        this.message = 'Error: Can\'t add product type: ' + error?.error?.message;
+        this.showAlert = true;
       }
     });
+  }
+
+  close() {
+    this.showAlert = false;
   }
 }

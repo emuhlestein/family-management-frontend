@@ -26,5 +26,8 @@
     </div>
     <button class="btn btn-success btn-block"
       [disabled]="frm.invalid">Create</button>
+    <div class="mt-3" *ngIf="showAlert">
+      <ngb-alert type="danger" (close)="close()">{{message}}</ngb-alert>
+    </div>
   </form>
 </div>

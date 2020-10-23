@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { ProductTypeListComponent } from './product-type-list/product-type-list.component';
 import { ProductTypeAddComponent } from './product-type-add/product-type-add.component';
 import { ProductTypeDirective } from './product-type-add/product-type.directive';
+import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ProductTypeDirective } from './product-type-add/product-type.directive'
   imports: [
     CommonModule,
     FormsModule,
+    NgbAlertModule,
     RouterModule.forChild([
       {
         path: '',
