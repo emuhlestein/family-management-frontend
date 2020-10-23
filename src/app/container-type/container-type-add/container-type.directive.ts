@@ -2,7 +2,7 @@ import { Directive } from '@angular/core';
 import { AbstractControl, NG_VALIDATORS, Validator } from '@angular/forms';
 
 @Directive({
-  selector: '[appProductTypeValidate]',
+  selector: '[appContainerTypeValidate]',
   providers: [{
     provide: NG_VALIDATORS,
     useExisting: ContainerTypeDirective,

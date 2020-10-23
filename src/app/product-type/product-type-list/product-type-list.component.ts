@@ -33,14 +33,6 @@ export class ProductTypeListComponent implements OnInit {
     this.router.navigate(['new'], { relativeTo: this.route });
   }
 
-  addProductType() {
-    const newItem = new ProductType(4, "New Item", "");
-    const foundItem = this.productTypes.find(item => item.name === newItem.name)
-    if (!foundItem) {
-      this.productTypes.push(newItem);
-    }
-  }
-
   onDeleteProductType(id: number) {
     if (this.confirmDelete()) {
       this.service.deleteProductType(id);
@@ -51,9 +43,4 @@ export class ProductTypeListComponent implements OnInit {
   confirmDelete() {
     return confirm("Are you sure you want to delete this item");
   }
-
-  cancel() {
-
-  }
-
 }

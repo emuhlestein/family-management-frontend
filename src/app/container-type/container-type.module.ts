@@ -4,15 +4,19 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { ContainerTypeListComponent } from './container-type-list/container-type-list.component';
 import { ContainerTypeAddComponent } from './container-type-add/container-type-add.component';
+import { ContainerTypeDirective } from './container-type-add/container-type.directive';
+import { NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     ContainerTypeListComponent,
-    ContainerTypeAddComponent
+    ContainerTypeAddComponent,
+    ContainerTypeDirective
   ],
   imports: [
     CommonModule,
     FormsModule,
+    NgbAlertModule,
     RouterModule.forChild([
       {
         path: '',
