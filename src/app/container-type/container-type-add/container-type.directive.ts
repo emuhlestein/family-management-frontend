@@ -5,11 +5,11 @@ import { AbstractControl, NG_VALIDATORS, Validator } from '@angular/forms';
   selector: '[appProductTypeValidate]',
   providers: [{
     provide: NG_VALIDATORS,
-    useExisting: ProductTypeDirective,
+    useExisting: ContainerTypeDirective,
     multi: true
   }]
 })
-export class ProductTypeDirective implements Validator {
+export class ContainerTypeDirective implements Validator {
 
   constructor() {
   }

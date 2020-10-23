@@ -42,14 +42,10 @@ export class ProductTypeListComponent implements OnInit {
 
   onDeleteProductType(id: number) {
     if (this.confirmDelete()) {
+      this.service.deleteProductType(id);
       alert('This item will be deleted: ' + id);
-    } else {
-      alert('This item will not be deleted: ' + id);
+      this.service.getProductTypes();
     }
-  }
-
-  deleteProductType(selectedOption) {
-    this.productTypes = this.productTypes.filter(item => item !== selectedOption)
   }
 
   confirmDelete() {

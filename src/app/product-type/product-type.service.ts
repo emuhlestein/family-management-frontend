@@ -27,5 +27,12 @@ export class ProductTypeService {
     return this.http.post<ProductType>(this.url, productType);
   }
 
+  deleteProductType(id: number) {
+    let endpoint = "/" + id;
+    this.http.delete(this.url + endpoint).subscribe(data => {
+      console.log(data + ' has been deleted');
+    });
+  }
+
 
 }
