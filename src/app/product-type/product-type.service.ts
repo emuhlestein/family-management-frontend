@@ -18,9 +18,11 @@ export class ProductTypeService {
   getProductTypes() {
     const data$ = this.http.get<ProductType[]>(this.url);
     data$.subscribe(data => {
-      console.log(data);
       this.productTypeSubject.next(data);
-    });
+    },
+      error => {
+        console.error("Looks like a network error", error);
+      });
   }
 
   addProductType(productType: ProductType): Observable<ProductType> {
@@ -30,7 +32,7 @@ export class ProductTypeService {
   deleteProductType(id: number) {
     let endpoint = "/" + id;
     this.http.delete(this.url + endpoint).subscribe(data => {
-      console.log(data + ' has been deleted');
+      this.getProductTypes();
     });
   }
 

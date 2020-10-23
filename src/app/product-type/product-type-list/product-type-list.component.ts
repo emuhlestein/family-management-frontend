@@ -29,6 +29,7 @@ export class ProductTypeListComponent implements OnInit {
   }
 
   onAddProductType() {
+    console.log('prod type route: ', this.route);
     this.router.navigate(['new'], { relativeTo: this.route });
   }
 
@@ -43,8 +44,7 @@ export class ProductTypeListComponent implements OnInit {
   onDeleteProductType(id: number) {
     if (this.confirmDelete()) {
       this.service.deleteProductType(id);
-      alert('This item will be deleted: ' + id);
-      this.service.getProductTypes();
+      // this.service.getProductTypes();
     }
   }
 

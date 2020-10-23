@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgForm, NgModel } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { ProductTypeService } from '../product-type.service';
 import { ProductType } from '../product-type';
@@ -14,7 +14,7 @@ export class ProductTypeAddComponent implements OnInit, OnDestroy {
 
   private subscription: Subscription;
 
-  constructor(private service: ProductTypeService, private router: Router) {
+  constructor(private service: ProductTypeService, private router: Router, private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
@@ -26,17 +26,18 @@ export class ProductTypeAddComponent implements OnInit, OnDestroy {
     }
   }
 
-
   onAddProductType(form: NgForm) {
     this.subscription = this.service.addProductType(new ProductType(0, form.value.name, form.value.description)).subscribe({
       next: data => {
         this.service.getProductTypes();
-        this.router.navigate(['/foodstorage/types']);
+        console.log('Route: ', this.route);
+        console.log('Router: ', this.router);
+
+        this.router.navigate(['/producttype']);
       },
       error: error => {
 
       }
     });
   }
-
 }
