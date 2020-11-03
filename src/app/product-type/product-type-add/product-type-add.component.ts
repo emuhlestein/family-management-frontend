@@ -30,7 +30,8 @@ export class ProductTypeAddComponent implements OnInit, OnDestroy {
 
   onAddProductType(form: NgForm) {
     this.subscription = this.service.addProductType(new ProductType(0, form.value.name, form.value.description)).subscribe({
-      next: data => {
+      next: resp => {
+        console.log('Product Type: ', resp);
         this.service.getProductTypes();
         this.router.navigate(['/producttype']);
       },

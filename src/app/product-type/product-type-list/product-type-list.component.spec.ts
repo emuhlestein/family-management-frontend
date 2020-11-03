@@ -1,13 +1,16 @@
+import { HttpClient, HttpHandler } from '@angular/common/http';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { Router } from '@angular/router';
 
 import { ProductTypeListComponent } from './product-type-list.component';
 
-describe('FoodProductTypeComponent', () => {
+describe('FoodProductTypeListComponent', () => {
   let component: ProductTypeListComponent;
   let fixture: ComponentFixture<ProductTypeListComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      providers: [HttpClient, HttpHandler, Router],
       declarations: [ProductTypeListComponent]
     })
       .compileComponents();
