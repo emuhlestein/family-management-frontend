@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, of } from 'rxjs';
 import { ContainerType } from './container-type';
 import { Observable } from 'rxjs/internal/Observable';
 
@@ -14,6 +14,10 @@ export class ContainerTypeService {
   containerTypes$ = this.containerTypeSubject.asObservable();
 
   constructor(private http: HttpClient) { }
+
+  getData(): Observable<number> {
+    return of(1, 2, 3, 4);
+  }
 
   getContainerTypes() {
     const data$ = this.http.get<ContainerType[]>(this.url);

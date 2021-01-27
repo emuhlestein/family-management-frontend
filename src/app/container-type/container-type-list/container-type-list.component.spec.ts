@@ -17,8 +17,6 @@ class ContainerTypeServiceMock extends ContainerTypeService {
 describe('ContainerTypeListComponent', () => {
   let component: ContainerTypeListComponent;
   let fixture: ComponentFixture<ContainerTypeListComponent>;
-  let location: Location;
-  let router: Router;
   let routerSpy = {
     navigate: jasmine.createSpy('navigate')
   }

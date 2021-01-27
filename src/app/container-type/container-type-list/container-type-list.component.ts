@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { ContainerType } from '../container-type';
 import { ContainerTypeService } from '../container-type.service';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-container-type-list',
@@ -15,16 +16,20 @@ export class ContainerTypeListComponent implements OnInit {
   constructor(private service: ContainerTypeService, private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.service.containerTypes$.subscribe(data => {
-      this.containerTypes = [];
-      if (data) {
-        data.forEach(item => {
-          this.containerTypes.push(item);
-        })
-      }
-    })
+    console.log('In ngOnInit');
+    this.service.getData().subscribe(data => {
+      console.log('Data: ', data);
+    });
+    // this.service.containerTypes$.pipe(take(1)).subscribe(data => {
+    //   this.containerTypes = [];
+    //   if (data) {
+    //     data.forEach(item => {
+    //       this.containerTypes.push(item);
+    //     })
+    //   }
+    // })
 
-    this.service.getContainerTypes();
+    // this.service.getContainerTypes();
   }
 
   onAddContainerType() {

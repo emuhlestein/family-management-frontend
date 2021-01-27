@@ -8,21 +8,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 import { AppRoutingModule } from './app-routing.module';
-import { ToolbarComponent } from './toolbar/toolbar.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NavBarComponent } from './navbar/navbar.component';
+import { ClickOutsideDirective } from './click-outside.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent,
-    ToolbarComponent
+    NavBarComponent,
+    ClickOutsideDirective
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
-    HttpClientModule,
-    NgbModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
