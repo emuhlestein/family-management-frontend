@@ -24,7 +24,7 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     RouterModule.forChild([
       {
-        path: 'add-product-type',
+        path: 'add',
         component: ProductTypeAddComponent
       },
       {

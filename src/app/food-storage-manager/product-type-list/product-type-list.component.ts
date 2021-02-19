@@ -30,7 +30,7 @@ export class ProductTypeListComponent implements OnInit {
 
   onAddProductType() {
     console.log('prod type route: ', this.route);
-    this.router.navigate(['/add-product-type']);
+    this.router.navigate(['add'], { relativeTo: this.route});
   }
 
   onDeleteProductType(id: number) {
