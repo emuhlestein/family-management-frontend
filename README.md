@@ -25,3 +25,15 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Following Errors
+Caused by not including FormsModule.
+Also can be caused by not including component in module.
+error NG8003: No directive found with exportAs 'ngForm'.
+error NG8003: No directive found with exportAs 'ngModel'.
+
+For lazy loaded module, import COMMON_MODULE instead of BROWSER_MODULE.
+BrowserModule has already been loaded. If you need access to common directives such as NgIf and NgFor from a lazy loaded module, import CommonModule instead.
+
+
+

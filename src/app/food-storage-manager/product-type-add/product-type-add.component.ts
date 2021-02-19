@@ -2,8 +2,8 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgForm, NgModel } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
-import { ProductTypeService } from '../product-type.service';
 import { ProductType } from '../product-type';
+import { ProductTypeService } from '../product-type.service';
 
 @Component({
   selector: 'app-product-type-add',

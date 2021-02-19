@@ -14,6 +14,7 @@ import { ClickOutsideDirective } from './click-outside.directive';
 @NgModule({
   declarations: [
     AppComponent,
+
     PageNotFoundComponent,
     NavBarComponent,
     ClickOutsideDirective
