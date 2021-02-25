@@ -32,8 +32,9 @@ Also can be caused by not including component in module.
 error NG8003: No directive found with exportAs 'ngForm'.
 error NG8003: No directive found with exportAs 'ngModel'.
 
-For lazy loaded module, import COMMON_MODULE instead of BROWSER_MODULE.
-BrowserModule has already been loaded. If you need access to common directives such as NgIf and NgFor from a lazy loaded module, import CommonModule instead.
+For lazy loaded module, import CommonModule instead of BrowserModule.
+BrowserModule has already been loaded. If you need access to common directives such as NgIf and NgFor from a lazy loaded module, import CommonModule instead.  
+Import FormsModule of ngModule.
 
 
 
